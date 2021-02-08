@@ -1,14 +1,22 @@
 class Fizzbuzz {
-    isDivisibleByThree(number) {
+    _isDivisibleByThree(number) {
       return number % 3 === 0;
     };
-    isDivisibleByFive(number) {
+    _isDivisibleByFive(number) {
       return number % 5 === 0;
     };
-    isDivisibleByFifteen(number) {
+    _isDivisibleByFifteen(number) {
         return number % 15 === 0;
     };
     result(number) {
-      return "Fizz";
+    if(this._isDivisibleByFifteen(number)){
+            return "FizzBuzz"
+      }else if(this._isDivisibleByFive(number)){
+          return "Buzz";
+      }else if(this._isDivisibleByThree(number)){
+            return "Fizz";
+      }else {
+          return number;
+      };
     };
 };
