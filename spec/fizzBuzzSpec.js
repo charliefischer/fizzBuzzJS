@@ -8,14 +8,26 @@ describe('Fizzbuzz', function() {
             expect(fizzbuzz.isDivisibleByThree(3)).toBe(true);
         });
 
-        it('divisble by 5', function() {
+        it('not divisible by 3', function() {
+            fizzbuzz = new Fizzbuzz();
+            expect(fizzbuzz.isDivisibleByThree(4)).toBe(false);
+        });
+
+
+        it('divisible by 5', function() {
             fizzbuzz = new Fizzbuzz();
             expect(fizzbuzz.isDivisibleByFive(5)).toBe(true);
         });
 
-        it('not divisble by 3', function() {
+        it('not divisible by 5', function() {
             fizzbuzz = new Fizzbuzz();
-            expect(fizzbuzz.isDivisibleByThree(4)).toBe(false);
+            expect(fizzbuzz.isDivisibleByFive(7)).toBeFalsy();
         });
+
+        it('is divisible by 15', function() {
+            fizzbuzz = new Fizzbuzz();
+            expect(fizzbuzz.isDivisibleByFifteen(15)).toBeTruthy();
+        });
+
     });
 });
