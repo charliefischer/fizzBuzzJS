@@ -8,4 +8,7 @@ class Fizzbuzz {
     isDivisibleByFifteen(number) {
         return number % 15 === 0;
     };
+    result(number) {
+      return "Fizz";
+    };
 };
